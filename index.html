@@ -4,9 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
     <title>Document</title>
 </head>
 <body>
-    hello
+    
+    <div id="img"></div>
+    <div id="css"></div>
+    <div id="html"></div>
+    <div id="js"></div>
+    <script>
+        $(function(){
+            $.get("/img",function(data){
+                document.getElementById('img').innerHTML = data;
+            });
+            $.get("/js",function(data){
+                document.getElementById('js').innerHTML = data;
+            });
+            $.get("/css",function(data){
+                document.getElementById('css').innerHTML = data;
+            });
+            $.get("/html",function(data){
+                document.getElementById('html').innerHTML = data;
+            });
+        });
+        
+    </script>
 </body>
 </html>
