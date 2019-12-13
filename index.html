@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="jquery.min-3.4.1.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -15,16 +14,16 @@
     <div id="js"></div>
     <script>
         $(function(){
-            $.get("/img",function(data){
+            $.get("https://jiekey.github.io/static/img",function(data){
                 document.getElementById('img').innerHTML = data;
             });
-            $.get("/js",function(data){
+            $.get("https://jiekey.github.io/static/js",function(data){
                 document.getElementById('js').innerHTML = data;
             });
-            $.get("/css",function(data){
+            $.get("https://jiekey.github.io/static/css",function(data){
                 document.getElementById('css').innerHTML = data;
             });
-            $.get("/html",function(data){
+            $.get("https://jiekey.github.io/static/html",function(data){
                 document.getElementById('html').innerHTML = data;
             });
         });
